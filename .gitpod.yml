@@ -1,5 +1,5 @@
 tasks:
-  - init:  npm install -g @vue/cli && vue ui
+  - init:  npm install -g @vue/cli && vue ui && cd vue-typescript-class-lazyloading-mocha-webpack-gitpod && npm install
     # command: npm run dev
 ports:
   - port: 8000
