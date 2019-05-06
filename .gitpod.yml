@@ -1,5 +1,5 @@
 tasks:
-  - init:  npm install -g @vue/cli && vui ui
+  - init:  npm install -g @vue/cli && vue ui
     # command: npm run dev
 ports:
   - port: 8000
