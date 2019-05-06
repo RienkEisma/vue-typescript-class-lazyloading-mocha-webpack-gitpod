@@ -1,2 +1,3 @@
 tasks:
-- command: npm install -g @vue/cli
+  - init:  npm install -g @vue/cli
+    # command: npm run dev
