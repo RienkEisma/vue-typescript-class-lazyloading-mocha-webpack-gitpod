@@ -1,16 +1,15 @@
-import { Module, VuexModule, Mutation, Action } from "vuex-module-decorators";
-import Store from "../store";
+import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
+import Store from '../store';
 
 @Module({
     dynamic: true,
     store: Store,
-    name: "testCounter",
+    name: 'testCounter',
     namespaced: true,
 })
 export default class TestModule extends VuexModule {
 
     public count: number = 0;
-
     public countHistory: number[] = [];
 
     public get lastFiveCountValues(): number[] {
@@ -22,16 +21,14 @@ export default class TestModule extends VuexModule {
     }
 
     @Mutation
-    public INCREMENT_COUNT(amount:number) {
+    public INCREMENT_COUNT(amount: number) {
         this.count += amount;
-        this.countHistory.unshift(amount)
+        this.countHistory.unshift(amount);
     }
 
-    // loadResults will automatically be called when the inner async method promise resolves
-    @Action({ commit: "INCREMENT_COUNT"})
-    public async incrementCount({amount = 1}) {
-        return await setTimeout(() => {
-            return amount;
-        }, 200) // just setTimeout to make it async, could be an api call
+    // INCREMENT_COUNT will automatically be called when the inner async method promise resolves
+    @Action({ commit: 'INCREMENT_COUNT', rawError: true})
+    public async incrementCount({amount = 0}) {
+        return await new Promise(resolve => setTimeout(resolve, 200, amount));
     }
 }
