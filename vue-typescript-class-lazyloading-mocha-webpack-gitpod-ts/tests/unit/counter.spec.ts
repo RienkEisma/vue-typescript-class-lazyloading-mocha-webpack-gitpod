@@ -24,7 +24,6 @@ it('fetches async when a button is clicked', done => {
   }, 1000)
   // this is the documented way, but it does not seem to work for vuex promises or something
 //   wrapper.vm.$nextTick(() => {
-//     console.log(wrapper.vm);
 //     expect(wrapper.text()).to.include('Count: 1')
 //     // expect(wrapper.vm.value).toBe('value');
 //     done()
