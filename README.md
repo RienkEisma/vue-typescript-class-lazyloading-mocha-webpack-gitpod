@@ -13,6 +13,6 @@ After that you need to manually import this project.
 ## Testing
 Run:
 ```
-npm run test:unit
+cd vue-typescript-class-lazyloading-mocha-webpack-gitpod-ts && npm run test:unit
 ```
 In a new terminal.
