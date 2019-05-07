@@ -1,7 +1,18 @@
 # vue-typescript-class-lazyloading-mocha-webpack-gitpod
 template for a vue typescript class based project with vuex and mocha webpack tests
 
+## Vue cli GUI
 
-After building, you need to import the project folder as a new project and run serve in the project tasks in the vue cli ui.
+If you want to use the Vue cli GUI to easily manage dependencies and install plugins you should run:
+```
+vue ui
+```
+in a new terminal.
+After that you need to manually import this project.
 
-For a direct live reloading branch, select the 'live-reload' branch.
+## Testing
+Run:
+```
+npm run test:unit
+```
+In a new terminal.
