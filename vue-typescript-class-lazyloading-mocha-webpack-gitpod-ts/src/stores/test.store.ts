@@ -29,6 +29,8 @@ export default class TestModule extends VuexModule {
     // INCREMENT_COUNT will automatically be called when the inner async method promise resolves
     @Action({ commit: 'INCREMENT_COUNT', rawError: true})
     public async incrementCount({amount = 0}) {
-        return await new Promise(resolve => setTimeout(resolve, 200, amount));
+        return await new Promise((resolve) => {
+            setTimeout(resolve, 200, amount);
+        });
     }
 }
